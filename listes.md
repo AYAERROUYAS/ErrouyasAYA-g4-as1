@@ -198,6 +198,7 @@ Pour tous ces parcours de listes, il est conseillé d'utiliser des noms de varia
 ```{admonition} Exercice 4.1 : Argmax
 Écrivez une fonction en Python qui permette de calculer l'argmax d'une liste, c'est-à-dire l'indice auquel est stockée la valeur maximale de la liste.
 Si cette valeur maximale est présente plusieurs fois dans la liste, on retournera l'indice de sa première occurrence.
+```
 
 ### Correction
 
@@ -364,7 +365,24 @@ print(sorted(liste))
 :name: ex4.2
 Écrivez une fonction qui prenne deux listes en entrée et retourne l'intersection des deux listes (c'est-à-dire une liste contenant tous les éléments présents dans les deux listes).
 ```
+### CORRECTION
+```
+def intersection(l1,l2):
+    l3=[]
+    for e in l1:
+        if e in l2 and e not in l3:
+            l3.append(e)
+    return l3
 
+
+
+
+l1=[2,4,5,2,7,6]
+l2=[5,8,2,3,2]
+print("A inter B ", intersection(l1,l2))
+
+
+```
 <div id="pad_4.2" class="pad"></div>
 <script>
     Pythonpad('pad_4.2', 
